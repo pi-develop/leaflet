@@ -1,0 +1,24 @@
+---
+title: "Xinjiang"
+date: "10/1/2021"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Forgive me for the barebones nature of this project, but that's how I'll do it
+
+# 10/1/2021
+
+```{r}
+library(leaflet)
+map<-leaflet() %>%
+    addTiles()
+map<-map %>%
+    addMarkers(lat=38.8977, lng=77.0365,
+               popup="Xinjiang")
+map
+```
